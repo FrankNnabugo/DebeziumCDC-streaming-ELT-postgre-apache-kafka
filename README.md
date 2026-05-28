@@ -5,8 +5,11 @@ docker compose -f infra/docker/docker-compose.yml up
 
 Wait until:
 Kafka is healthy
+
 Kafka Connect is running
+
 Elasticsearch is ready
+
 postgres is running
 
 Verify Kafka Connect
@@ -35,6 +38,7 @@ CREATE TABLE users (
 
 Insert Data:
 INSERT INTO users(name, email)
+
 VALUES ('Frank', 'frank@gmail.com');
 
 
