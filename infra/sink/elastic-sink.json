@@ -1,0 +1,21 @@
+
+{
+  "name": "elastic-sink",
+  "config": {
+    "topics": "cdc.public.users",
+    "input.data.format": "PROTOBUF",
+    "connector.class": "ElasticsearchSinkConnector",
+    "name": "elastic-sink",
+    "kafka.api.key": "api_key",
+    "kafka.api.secret": "api_password",
+    "connection.url": "http://elasticsearch:9200",
+    "type.name": "_doc",
+    "key.ignore": "false",
+    "schema.ignore": "true",
+    "compact.map.entries": "true",
+    "behavior.on.null.values": "delete",
+    "behavior.on.malformed.documents": "ignore",
+    "auto.create.indices.at.start": "false",
+    "tasks.max": "1"
+  }
+}
